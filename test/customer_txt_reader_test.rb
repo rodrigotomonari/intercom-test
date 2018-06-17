@@ -2,6 +2,7 @@
 
 require "test_helper"
 require "customer_reader_txt"
+require "exceptions"
 
 class CustomerTxtReaderTest < Minitest::Test
   def setup
@@ -31,5 +32,17 @@ class CustomerTxtReaderTest < Minitest::Test
     assert_raises do
       @customer_reader_txt.rows
     end
+  end
+
+  def test_line_error_index
+    @customer_reader_txt = CustomerReaderTxt.new(File.join("test", "fixtures", "invalid_json_format.txt"))
+
+    exception = assert_raises InvalidFileFormatException do
+      @customer_reader_txt.rows.inspect
+    end
+
+    expected_msg = "Invalid JSON format in the file test/fixtures/invalid_json_format.txt. Please check the line 2."
+
+    assert_equal expected_msg, exception.message
   end
 end

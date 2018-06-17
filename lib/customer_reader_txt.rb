@@ -15,8 +15,8 @@ class CustomerReaderTxt
     raise InvalidFileNotFoundException, "File \"#{filename}\" not found." unless File.exist?(filename)
 
     File.open(filename).map do |line|
-      @index = +1
-      json   = convert_to_json(line)
+      @index += 1
+      json = convert_to_json(line)
 
       check_fields(json)
 
