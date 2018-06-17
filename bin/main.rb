@@ -4,12 +4,6 @@
 require_relative "../lib/main"
 
 filename = ARGV.shift || "customers.txt"
-
-unless File.exist? filename
-  puts "File \"#{filename}\" not found."
-  exit
-end
-
 dublin_latitude = 53.339428
 dublin_longitude = -6.257664
 

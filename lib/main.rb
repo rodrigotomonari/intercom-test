@@ -28,7 +28,7 @@ class Main
       customer_collection.sort!
 
       CustomerOutput.new(customer_collection).output
-    rescue InvalidCoordinateException, InvalidFileFormatException => e
+    rescue InvalidCoordinateException, InvalidFileFormatException, InvalidFileNotFoundException => e
       puts e.message
     end
   end

@@ -5,3 +5,6 @@ end
 
 class InvalidFileFormatException < ArgumentError
 end
+
+class InvalidFileNotFoundException < IOError
+end
