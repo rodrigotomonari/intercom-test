@@ -37,4 +37,8 @@ class CustomerCollectionTest < Minitest::Test
 
     assert_equal [1, 2, 3], @customer_collection.map(&:user_id)
   end
+
+  def test_implements_enumerable_interface
+    assert_equal true, CustomerCollection.include?(Enumerable)
+  end
 end

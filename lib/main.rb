@@ -27,7 +27,7 @@ class Main
 
       customer_collection.sort!
 
-      CustomerOutput.new(customer_collection.customers).output
+      CustomerOutput.new(customer_collection).output
     rescue InvalidCoordinateException, InvalidFileFormatException => e
       puts e.message
     end
