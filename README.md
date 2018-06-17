@@ -36,7 +36,7 @@ ruby bin/main.rb PATH_TO_FILE
 
 ### Tests
 
-To run the tests just run:
+To run the test suite:
 
 ```
 bundle install
