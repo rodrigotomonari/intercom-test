@@ -1,5 +1,9 @@
 # Intercom Coding Test
 
+## Code Status
+
+[![Build Status](https://travis-ci.org/rodrigotomonari/intercom-test.svg?branch=master)](https://travis-ci.org/rodrigotomonari/intercom-test)
+
 ### Requirements
 
 - Ruby +2.0
