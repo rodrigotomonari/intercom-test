@@ -45,6 +45,6 @@ rake test
 
 ### My considerations:
 
-- I architect the application so that it is easy to maintain and add new features. Also took into account how it can go forward.
+- I architected the application so that it is easy to maintain and add new features. Also took into account how it can go forward.
 - I assumed the customers.txt file would be read from the local machine. But as the application was architected, it would be easy to read the data from others source, such as a remote URL. Just need to create a new Reader class that implements the "rows" methods.
 - As the output format was not explicitly specified, I outputted using tabulation. But it would be simple to add other output formats. Just need to create a new output decorator class.
